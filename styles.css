@@ -183,5 +183,65 @@ input[type="text"] {
     width: 100%; /* Full width */
     font-size: 1rem;
 }
+img {
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+}
+/* Hide menu by default */
+.menu {
+    display: none;
+}
 
+/* Show menu on small screens */
+@media screen and (max-width: 768px) {
+    .menu {
+        display: block;
+    }
+}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-md-4">Content</div>
+        <div class="col-sm-6 col-md-4">Content</div>
+        <div class="col-sm-6 col-md-4">Content</div>
+    </div>
+</div>
+
+/* Flexbox Example */
+.navbar {
+    display: flex;
+    flex-wrap: wrap; /* Wrap items on small screens */
+    justify-content: space-between;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+    gap: 1rem;
+}
+/* Default styles (Desktop-first) */
+.container {
+    width: 80%;
+    margin: auto;
+    font-size: 16px;
+}
+
+/* Styles for smaller screens */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 95%; /* Reduce width for mobile */
+        font-size: 14px; /* Smaller text size */
+    }
+}
+
+/* Very small screens */
+@media screen and (max-width: 480px) {
+    .container {
+        font-size: 12px; /* Further reduce text size */
+    }
+}
+/* Instead of a fixed width */
+.container {
+    width: 100%; /* Full width for mobile screens */
+    padding: 1rem; /* Spacing using relative units */
+}
 
