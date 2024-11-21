@@ -1,2 +1,0 @@
-# StatSports-Test
-Test Project
